@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium To-Do List</title>
+    <meta name="description" content="고급스러운 디자인의 스마트 할 일 관리 어플리케이션">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <div class="header-content">
+                <h1 id="app-title">My Tasks</h1>
+                <p id="current-date"></p>
+            </div>
+            <div class="stats">
+                <span id="task-count">0 tasks</span>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <div class="input-wrapper">
+                <input type="text" id="todo-input" placeholder="무엇을 도와드릴까요?" autocomplete="off">
+                <button id="add-btn" aria-label="Add Task">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="list-section">
+            <ul id="todo-list">
+                <!-- Tasks will be injected here -->
+            </ul>
+        </section>
+
+        <div class="empty-state" id="empty-state">
+            <div class="empty-icon">✨</div>
+            <p>모든 할 일을 마쳤습니다!</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
